@@ -1,17 +1,11 @@
-Her er en oppdatert `README.md`-fil for prosjektet ditt, med tydelig oppsett, kommandoer og beskrivelse.
 
----
-
-### ✅ Forslag til `README.md`
-
-````markdown
 # GAN_BurstSelect
 
 A Generative Adversarial Approach to Burst-Sequence Image Ranking.
 
 This project uses a GAN-based model to automatically rank or generate the best image in a burst sequence, based on features like sharpness, blurriness, posture, and eye contact.
 
-## 🔧 Setup
+## Setup
 
 ### 1. Clone and set up environment
 
@@ -44,7 +38,7 @@ synth_dir: Project_4630/Synthetic_Data/Images
 labels: Project_4630/Synthetic_Data/pairwise_labels.json
 ```
 
-## 🚀 Running the Project
+##  Running the Project
 
 ### Train the GAN model
 
@@ -83,26 +77,8 @@ GAN_BurstSelect/
 └── README.md
 ```
 
-## 🧠 Authors
+## Authors
 
 * Alexander Bazo
 * Kimberly Crimson
 * Espen Fodstad
-
-````
-
----
-
-### 📌 Neste steg
-
-1. **Erstatt innholdet i din `README.md` med teksten over.**
-2. Lagre filen.
-3. Git-commit og push:
-
-```bash
-git add README.md
-git commit -m "Oppdatert README med setup og bruksinstruksjoner"
-git push
-````
-
-Vil du også ha med eksempelbilde fra `outputs/` i README?
