@@ -1,0 +1,37 @@
+# Python virtual environments
+.venv/
+env/
+venv/
+
+# don’t commit my local venv
+opprettet/
+s
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code workspace settings
+.vscode/
+
+# macOS / Windows file system junk
+.DS_Store
+Thumbs.db
+
+# IDE / editor swap files
+*.swp
+*~
+
+# Log files
+*.log
+
+# Data, outputs and model checkpoints
+outputs/
+models/
+
+# Your large local project folder
+Project_4630/
+
+# Config files that shouldn't be committed
+pyvenv.cfg

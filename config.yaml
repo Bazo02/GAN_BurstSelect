@@ -1,0 +1,21 @@
+# Paths til data og resultater
+raw_dir:     "/Users/alexbazo/GAN_BurstSelect/Project_4630/Raw_Image_Data"
+synth_dir:   "/Users/alexbazo/GAN_BurstSelect/Project_4630/Synthetic_Data/Images"
+labels:      "/Users/alexbazo/GAN_BurstSelect/Project_4630/Synthetic_Data/pairwise_labels.json"
+models_dir:  "models"
+outputs_dir: "outputs"
+
+
+
+# Bilde-dimensjoner
+img_height: 128
+img_width:  128
+
+# Trening
+batch_size:    16
+latent_dim:   100
+epochs:       50
+
+# Optimizer
+learning_rate: 0.0002
+beta_1:         0.5
