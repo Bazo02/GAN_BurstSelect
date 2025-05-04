@@ -21,18 +21,17 @@ def parse_pair(path_a, path_b, label, img_size):
     return (img_a, img_b), tf.cast(label, tf.float32)
 
 # Lager tf.data.Dataset fra labels-json, bruker BASE_DIR internt
-# Signature matcher train_gan: labels_json, batch_size, img_size
-
 def make_dataset(labels_json, batch_size, img_size):
     entries = load_labels(labels_json)
-    # Bygg fullstendig sti basert på BASE_DIR
     frame_as = [os.path.join(BASE_DIR, e['frame_a']) for e in entries]
     frame_bs = [os.path.join(BASE_DIR, e['frame_b']) for e in entries]
     labels   = [e['label'] for e in entries]
 
     ds = tf.data.Dataset.from_tensor_slices((frame_as, frame_bs, labels))
     ds = ds.map(lambda a, b, l: parse_pair(a, b, l, img_size), num_parallel_calls=tf.data.AUTOTUNE)
-    ds = ds.shuffle(1000)
+    ds = ds.cache()
+    ds = ds.shuffle(buffer_size=500)
     ds = ds.batch(batch_size)
-    ds = ds.prefetch(tf.data.AUTOTUNE)
+    ds = ds.prefetch(buffer_size=tf.data.AUTOTUNE)
+
     return ds

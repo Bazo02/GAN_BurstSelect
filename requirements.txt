@@ -2,3 +2,4 @@ tensorflow>=2.10
 tensorflow-gan
 opencv-python
 pyyaml
+tqdm
